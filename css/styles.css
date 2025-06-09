@@ -1,0 +1,476 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #fff;
+    color: #000;
+    font-size: 16px;
+    line-height: 1.5;
+    transition: font-size 0.3s ease;
+}
+
+@keyframes slideInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(25px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.container {
+    width: 375px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-out;
+}
+
+.container:not(.hidden) {
+    animation-name: slideInFromRight;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background: #d4edda;
+    border-bottom: 1px solid #ccc;
+}
+
+footer {
+    background: #d4edda;
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+}
+
+header h1 {
+    font-size: 1.25em;
+    margin: 0;
+    text-align: center;
+}
+
+.home header {
+    position: relative;
+    justify-content: center;
+}
+
+.home header a {
+    position: absolute;
+    right: 20px;
+}
+
+.home header a img {
+    width: 24px;
+    height: 24px;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+.denounce-btn,
+.submit-btn,
+.offline-btn,
+.logout-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 15px;
+    color: #fff;
+    font-size: 1.125em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease, transform 0.15s ease, filter 0.3s ease;
+}
+
+.denounce-btn:hover,
+.submit-btn:hover,
+.offline-btn:hover,
+.logout-btn:hover {
+    filter: brightness(110%);
+}
+
+.denounce-btn:active,
+.submit-btn:active,
+.offline-btn:active,
+.logout-btn:active {
+    transform: scale(0.98);
+    filter: brightness(100%);
+}
+
+.denounce-btn {
+    background: #00cc00;
+    margin-bottom: 20px;
+}
+
+.camera-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}
+
+.recent-denounces h2 {
+    font-size: 1.125em;
+    margin-bottom: 10px;
+}
+
+.denounce-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.denounce-item:hover {
+    background: #e0e0e0;
+}
+
+.denounce-item p {
+    margin: 0;
+    font-size: 1em;
+}
+
+.denounce-item span {
+    font-size: 0.875em;
+    color: #666;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    padding: 10px;
+    transition: transform 0.2s ease;
+}
+
+nav a:hover {
+    transform: translateY(-2px);
+}
+
+nav img {
+    width: 24px;
+    height: 24px;
+}
+
+.form header {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.form header h1 {
+    flex: 1;
+    text-align: center;
+}
+
+.form header a img {
+    width: 24px;
+    height: 24px;
+}
+
+.form header a:first-child {
+    margin-right: 10px;
+    position: absolute;
+    left: 20px;
+}
+
+.form-section {
+    margin-bottom: 20px;
+}
+
+.form-section label {
+    display: block;
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.description {
+    width: 93%;
+}
+
+.photo-upload {
+    border: 1px dashed #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.uploaded-photo {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+input[type="file"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="file"] {
+    /* |Estilização do botão interno é limitada, mas a borda pode reagir  */
+    width: 90%;
+    font-size: 0.6em;
+} 
+
+
+input[type="file"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+
+textarea {
+    resize: none;
+    height: 80px;
+    margin: 0 auto;
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 100px;
+    border: 0;
+}
+
+.submit-btn {
+    background: #00cc00;
+}
+
+.offline-btn {
+    background: #666;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.details header {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.details header h1 {
+    flex: 1;
+    text-align: center;
+}
+
+.details header a img {
+    width: 24px;
+    height: 24px;
+}
+
+.details header a {
+    position: absolute;
+    left: 20px;
+}
+
+.details-section {
+    margin-bottom: 20px;
+}
+
+.details-section h2 {
+    font-size: 1.125em;
+    margin-bottom: 10px;
+}
+
+.details-section p {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+.mapa header {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.mapa header h1 {
+    flex: 1;
+    text-align: center;
+}
+
+.mapa header a img {
+    width: 24px;
+    height: 24px;
+}
+
+.mapa header a {
+    position: absolute;
+    left: 20px;
+}
+
+.config header {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.config header h1 {
+    flex: 1;
+    text-align: center;
+}
+
+.config header a img {
+    width: 24px;
+    height: 24px;
+}
+
+.config header a {
+    position: absolute;
+    left: 20px;
+}
+
+.config-section {
+    margin-bottom: 20px;
+}
+
+.config-section h2 {
+    font-size: 1.125em;
+    margin-bottom: 10px;
+}
+
+.toggle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.toggle input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+.toggle span {
+    font-size: 1em;
+}
+
+.select-label {
+    display: flex;
+    flex-direction: column;
+}
+
+.select-label span {
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.logout-btn {
+    background: #ff4444;
+}
+
+.toggle, .select-label select, .logout-btn {
+    cursor: pointer;
+}
+
+.ajuda header {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.ajuda header h1 {
+    flex: 1;
+    text-align: center;
+}
+
+.ajuda header a img {
+    width: 24px;
+    height: 24px;
+}
+
+.ajuda header a {
+    position: absolute;
+    left: 20px;
+}
+
+.chat-section {
+    margin-bottom: 20px;
+}
+
+.chat-section h2 {
+    font-size: 1.125em;
+    margin-bottom: 10px;
+}
+
+.chat-message {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.chat-message.bot {
+    background: #e0f7e0;
+    text-align: left;
+}
+
+.chat-message.user {
+    background: #f0f0f0;
+    text-align: right;
+}
+
+.chat-message p {
+    margin: 0;
+    font-size: 1em;
+}
+
+body.high-contrast {
+    background: #000;
+    color: #fff;
+}
+
+body.font-normal {
+    font-size: 16px;
+}
+
+body.font-grande {
+    font-size: 18px;
+}
+
+body.font-muito-grande {
+    font-size: 20px;
+}
+
+.high-contrast .denounce-btn,
+.high-contrast .submit-btn,
+.high-contrast .offline-btn,
+.high-contrast .logout-btn {
+    color: #000;
+    background: #fff;
+}
+
+.high-contrast .denounce-item {
+    background: #333;
+    color: #fff;
+}
+
+.high-contrast .chat-message.bot {
+    background: #1a3c1a;
+}
+
+.high-contrast .chat-message.user {
+    background: #444;
+}
